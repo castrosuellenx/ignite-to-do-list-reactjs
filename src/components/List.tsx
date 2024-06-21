@@ -1,33 +1,27 @@
+import {EmptyList} from './EmptyList';
 import styles from './List.module.css';
+import {ListHeader} from './ListHeader';
 
-export function List() {
-  const tasksLength = 0;
-  const tasksCompleted = 0;
+export type Task = {
+  id: string;
+  description: string;
+  isCompleted: boolean;
+};
+
+type Props = {
+  tasks: Task[];
+};
+
+export function List({tasks}: Props) {
+  const tasksLength = tasks.length;
+  const tasksCompleted = tasks.filter((task) => task.isCompleted).length;
+  const isEmptyList = tasksLength === 0;
 
   return (
     <div>
-      <div className={styles.listHeader}>
-        <aside>
-          <p>
-            Tarefas criadas <span>{tasksLength}</span>
-          </p>
-        </aside>
+      <ListHeader tasksLength={tasksLength} tasksCompleted={tasksCompleted} />
 
-        <aside>
-          <p>
-            Concluídas <span>{tasksCompleted}</span>
-          </p>
-        </aside>
-      </div>
-
-      <div className={styles.emptyListContent}>
-        <img src="./clipboard.png" alt="" />
-        <p>
-          <strong>Você ainda não tem tarefas cadastradas</strong>
-          <br />
-          <span>Crie tarefas e organize seus itens a fazer</span>
-        </p>
-      </div>
+      {isEmptyList ? <EmptyList /> : <div className={styles.listContent}></div>}
     </div>
   );
 }

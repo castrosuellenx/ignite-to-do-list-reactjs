@@ -2,7 +2,28 @@ import styles from './App.module.css';
 import {CreateButton} from './components/CreateButton';
 import {Header} from './components/Header';
 import {Input} from './components/Input';
-import {List} from './components/List';
+import {List, type Task} from './components/List';
+
+const tasks: Task[] = [
+  {
+    id: '1',
+    description:
+      'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
+    isCompleted: false,
+  },
+  {
+    id: '2',
+    description:
+      'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
+    isCompleted: false,
+  },
+  {
+    id: '3',
+    description:
+      'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
+    isCompleted: true,
+  },
+];
 
 function App() {
   return (
@@ -15,7 +36,7 @@ function App() {
           <CreateButton />
         </div>
 
-        <List />
+        <List tasks={tasks} />
       </main>
     </div>
   );
