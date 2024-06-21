@@ -14,10 +14,10 @@
   font-size: 2.5rem;
 }
 
-.titleBlue {
+.title span:first-child {
   color: var(--blue);
 }
 
-.titlePurple {
+.title span:last-child {
   color: var(--purple-dark);
 }
