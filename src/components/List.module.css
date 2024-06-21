@@ -1,0 +1,54 @@
+.listHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  font-weight: bold;
+
+  margin-bottom: 1.5rem;
+}
+
+.listHeader aside:first-of-type {
+  color: var(--blue);
+}
+
+.listHeader aside:last-of-type {
+  color: var(--purple);
+}
+
+.listHeader aside p {
+  font-size: 0.875rem;
+}
+
+.listHeader aside p span {
+  font-size: 0.75rem;
+  color: var(--gray-200);
+
+  margin-left: 0.5rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 100%;
+  background-color: var(--gray-400);
+}
+
+.emptyListContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+  padding: 4rem 1.5rem;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+}
+
+.emptyListContent img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.emptyListContent p {
+  text-align: center;
+  color: var(--gray-300);
+  line-height: 140%;
+}
