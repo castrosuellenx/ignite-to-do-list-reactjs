@@ -1,5 +1,5 @@
 import styles from './Input.module.css';
 
-export function Input() {
-  return <p>Input</p>;
+export function Input({...rest}: React.InputHTMLAttributes<HTMLInputElement>) {
+  return <input className={styles.input} {...rest} />;
 }

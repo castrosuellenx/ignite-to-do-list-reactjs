@@ -1,5 +1,10 @@
+import {PlusCircle} from 'phosphor-react';
 import styles from './CreateButton.module.css';
 
 export function CreateButton() {
-  return <p>CreateButton</p>;
+  return (
+    <button className={styles.createButton}>
+      Criar <PlusCircle size={18} />
+    </button>
+  );
 }
