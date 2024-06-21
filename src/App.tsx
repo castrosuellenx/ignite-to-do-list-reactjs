@@ -7,8 +7,7 @@ import {List, type Task} from './components/List';
 const tasks: Task[] = [
   {
     id: '1',
-    description:
-      'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
+    description: 'Lorem ipsum dolor sit amet.',
     isCompleted: false,
   },
   {
@@ -22,6 +21,12 @@ const tasks: Task[] = [
     description:
       'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
     isCompleted: true,
+  },
+  {
+    id: '4',
+    description:
+      'Lorem ipsum dolor sit amet. Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
+    isCompleted: false,
   },
 ];
 
