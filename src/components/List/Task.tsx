@@ -1,12 +1,7 @@
 import {Check, Trash} from 'phosphor-react';
 
+import {TaskType} from '../../hooks/useTaskList';
 import styles from './Task.module.css';
-
-export type TaskType = {
-  id: string;
-  description: string;
-  isCompleted: boolean;
-};
 
 type Props = {
   task: TaskType;

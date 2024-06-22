@@ -1,61 +1,29 @@
-import {useState} from 'react';
 import {PlusCircle} from 'phosphor-react';
-import {v4 as uuidv4} from 'uuid';
 
-import styles from './App.module.css';
 import {Header} from './components/Header';
 import {Input} from './components/Input';
 import {ListHeader} from './components/List/ListHeader';
 import {EmptyList} from './components/List/EmptyList';
-import {Task, type TaskType} from './components/List/Task';
+import {Task} from './components/List/Task';
+import {useTaskList} from './hooks/useTaskList';
+import styles from './App.module.css';
 
-// TODO: Move all logic to a custom hook
 // TODO: Responsiveness
 // TODO: i18n
 
 function App() {
-  const [tasks, setTasks] = useState<TaskType[]>([]);
-  const [newTaskName, setNewTaskName] = useState('');
-
-  const tasksLength = tasks.length;
-  const tasksCompleted = tasks.filter((task) => task.isCompleted).length;
-  const isEmptyList = tasksLength === 0;
-
-  function handleCreateNewTask(event: React.FormEvent) {
-    event.preventDefault();
-
-    const newTask: TaskType = {
-      id: uuidv4(),
-      description: newTaskName,
-      isCompleted: false,
-    };
-
-    setTasks((prevState) => [...prevState, newTask]);
-    setNewTaskName('');
-  }
-
-  function handleChangeNewTaskName(event: React.ChangeEvent<HTMLInputElement>) {
-    event.target.setCustomValidity('');
-    setNewTaskName(event.target.value);
-  }
-
-  function handleNewTaskNameInvalid(
-    event: React.InvalidEvent<HTMLInputElement>
-  ) {
-    event.target.setCustomValidity("Task name can't be empty");
-  }
-
-  function onToggleCheckTask(taskId: string) {
-    setTasks((prevState) =>
-      prevState.map((task) =>
-        task.id === taskId ? {...task, isCompleted: !task.isCompleted} : task
-      )
-    );
-  }
-
-  function onDeleteTask(taskId: string) {
-    setTasks((prevState) => prevState.filter((task) => task.id !== taskId));
-  }
+  const {
+    tasks,
+    newTaskName,
+    tasksLength,
+    tasksCompleted,
+    isEmptyList,
+    onToggleCheckTask,
+    onDeleteTask,
+    handleCreateNewTask,
+    handleChangeNewTaskName,
+    handleNewTaskNameInvalid,
+  } = useTaskList();
 
   return (
     <div className={styles.container}>
