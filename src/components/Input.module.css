@@ -1,5 +1,5 @@
 .input {
-  flex: 1;
+  width: 100%;
   line-height: 140%;
   padding: 1rem;
   color: var(--gray-100);
