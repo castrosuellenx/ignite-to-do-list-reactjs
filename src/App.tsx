@@ -23,15 +23,24 @@ const tasks: TaskType[] = [
     id: '3',
     description:
       'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
-    isCompleted: true,
+    isCompleted: false,
   },
   {
     id: '4',
     description:
-      'Lorem ipsum dolor sit amet. Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
-    isCompleted: false,
+      'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
+    isCompleted: true,
+  },
+  {
+    id: '5',
+    description:
+      'Lorem ipsum dolor sit amet. Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer. Lorem ipsum dolor sit amet. Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.',
+    isCompleted: true,
   },
 ];
+
+// TODO: Responsiveness
+// TODO: i18n
 
 function App() {
   const tasksLength = tasks.length;
