@@ -8,7 +8,6 @@ import {Task} from './components/List/Task';
 import {useTaskList} from './hooks/useTaskList';
 import styles from './App.module.css';
 
-// TODO: Responsiveness
 // TODO: i18n
 
 function App() {
