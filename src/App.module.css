@@ -24,7 +24,6 @@
 .container {
   scrollbar-width: thin;
   scrollbar-color: var(--gray-400) transparent;
-  scrollbar-gutter: stable both-edges;
 }
 
 .content {
