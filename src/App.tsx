@@ -3,8 +3,8 @@ import {PlusCircle} from 'phosphor-react';
 import styles from './App.module.css';
 import {Header} from './components/Header';
 import {Input} from './components/Input';
-import {EmptyList} from './components/List/EmptyList';
 import {ListHeader} from './components/List/ListHeader';
+import {EmptyList} from './components/List/EmptyList';
 import {Task, type TaskType} from './components/List/Task';
 
 const tasks: TaskType[] = [
@@ -46,7 +46,11 @@ function App() {
         <form className={styles.formWrapper}>
           <Input placeholder="Add a new task" aria-label="Task name" />
 
-          <button className={styles.createButton} type="submit">
+          <button
+            className={styles.createButton}
+            type="submit"
+            aria-label="Create new task"
+          >
             Create <PlusCircle size={18} />
           </button>
         </form>

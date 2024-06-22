@@ -2,13 +2,16 @@ import styles from './EmptyList.module.css';
 
 export function EmptyList() {
   return (
-    <div className={styles.container}>
-      <img src="./clipboard.png" alt="" />
+    <section className={styles.container}>
+      <img
+        src="./clipboard.png"
+        alt="Clipboard icon illustrating empty task list"
+      />
       <p>
-        <strong>Você ainda não tem tarefas cadastradas</strong>
+        <strong>You don't have any tasks registered</strong>
         <br />
-        <span>Crie tarefas e organize seus itens a fazer</span>
+        <span>Create tasks and organize your to-do items</span>
       </p>
-    </div>
+    </section>
   );
 }

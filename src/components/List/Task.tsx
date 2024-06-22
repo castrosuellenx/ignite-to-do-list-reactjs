@@ -18,7 +18,7 @@ export function Task({task}: Props) {
       <button
         className={task.isCompleted ? styles.checkboxChecked : styles.checkbox}
         type="button"
-        title={task.isCompleted ? 'Desmarcar tarefa' : 'Marcar tarefa'}
+        title={task.isCompleted ? 'Uncheck task' : 'Check task'}
       >
         {task.isCompleted ? (
           <Circle size={20} />
@@ -29,11 +29,7 @@ export function Task({task}: Props) {
 
       <p className={styles.taskDescription}>{task.description}</p>
 
-      <button
-        className={styles.trashButton}
-        type="button"
-        title="Deletar tarefa"
-      >
+      <button className={styles.trashButton} type="button" title="Delete task">
         <Trash size={16} weight="bold" />
       </button>
     </div>

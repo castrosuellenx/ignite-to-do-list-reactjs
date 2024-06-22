@@ -7,23 +7,19 @@ type Props = {
 
 export function ListHeader({tasksLength, tasksCompleted}: Props) {
   return (
-    <div className={styles.container}>
-      <aside>
-        <p>
-          Tarefas criadas <span>{tasksLength}</span>
-        </p>
-      </aside>
+    <section className={styles.container} aria-live="polite">
+      <p>
+        Created tasks <span>{tasksLength}</span>
+      </p>
 
-      <aside>
-        <p>
-          Concluídas{' '}
-          <span>
-            {tasksCompleted > 0
-              ? `${tasksCompleted} de ${tasksLength}`
-              : tasksCompleted}
-          </span>
-        </p>
-      </aside>
-    </div>
+      <p>
+        Done{' '}
+        <span>
+          {tasksCompleted > 0
+            ? `${tasksCompleted} of ${tasksLength}`
+            : tasksCompleted}
+        </span>
+      </p>
+    </section>
   );
 }
