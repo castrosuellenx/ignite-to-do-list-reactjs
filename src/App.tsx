@@ -2,9 +2,11 @@ import styles from './App.module.css';
 import {CreateButton} from './components/CreateButton';
 import {Header} from './components/Header';
 import {Input} from './components/Input';
-import {List, type Task} from './components/List';
+import {EmptyList} from './components/List/EmptyList';
+import {ListHeader} from './components/List/ListHeader';
+import {Task, type TaskType} from './components/List/Task';
 
-const tasks: Task[] = [
+const tasks: TaskType[] = [
   {
     id: '1',
     description: 'Lorem ipsum dolor sit amet.',
@@ -31,6 +33,10 @@ const tasks: Task[] = [
 ];
 
 function App() {
+  const tasksLength = tasks.length;
+  const tasksCompleted = tasks.filter((task) => task.isCompleted).length;
+  const isEmptyList = tasksLength === 0;
+
   return (
     <div className={styles.container}>
       <Header />
@@ -41,7 +47,22 @@ function App() {
           <CreateButton />
         </div>
 
-        <List tasks={tasks} />
+        <div>
+          <ListHeader
+            tasksLength={tasksLength}
+            tasksCompleted={tasksCompleted}
+          />
+
+          {isEmptyList ? (
+            <EmptyList />
+          ) : (
+            <div className={styles.taskListContent}>
+              {tasks.map((task) => (
+                <Task key={task.id} task={task} />
+              ))}
+            </div>
+          )}
+        </div>
       </main>
     </div>
   );

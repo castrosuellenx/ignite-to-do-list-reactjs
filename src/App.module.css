@@ -22,3 +22,9 @@
   transform: translateY(calc(-50%));
   margin-bottom: calc(4rem * 0.5);
 }
+
+.taskListContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
