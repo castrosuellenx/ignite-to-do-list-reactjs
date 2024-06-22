@@ -1,5 +1,6 @@
+import {PlusCircle} from 'phosphor-react';
+
 import styles from './App.module.css';
-import {CreateButton} from './components/CreateButton';
 import {Header} from './components/Header';
 import {Input} from './components/Input';
 import {EmptyList} from './components/List/EmptyList';
@@ -42,12 +43,15 @@ function App() {
       <Header />
 
       <main className={styles.content}>
-        <div className={styles.inputWrapper}>
-          <Input placeholder="Adicione uma nova tarefa" />
-          <CreateButton />
-        </div>
+        <form className={styles.formWrapper}>
+          <Input placeholder="Add a new task" aria-label="Task name" />
 
-        <div>
+          <button className={styles.createButton} type="submit">
+            Create <PlusCircle size={18} />
+          </button>
+        </form>
+
+        <section>
           <ListHeader
             tasksLength={tasksLength}
             tasksCompleted={tasksCompleted}
@@ -56,13 +60,13 @@ function App() {
           {isEmptyList ? (
             <EmptyList />
           ) : (
-            <div className={styles.taskListContent}>
+            <ul className={styles.taskListWrapper}>
               {tasks.map((task) => (
                 <Task key={task.id} task={task} />
               ))}
-            </div>
+            </ul>
           )}
-        </div>
+        </section>
       </main>
     </div>
   );

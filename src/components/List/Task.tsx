@@ -14,33 +14,27 @@ type Props = {
 
 export function Task({task}: Props) {
   return (
-    <div className={styles.taskContainer}>
-      {task.isCompleted ? (
-        <button
-          className={styles.taskCheckbox}
-          type="button"
-          title="Marcar tarefa"
-        >
-          <CheckCircle size={20} weight="fill" />
-        </button>
-      ) : (
-        <button
-          className={styles.taskCheckboxCompleted}
-          type="button"
-          title="Desmarcar tarefa"
-        >
+    <div className={styles.container}>
+      <button
+        className={task.isCompleted ? styles.checkboxChecked : styles.checkbox}
+        type="button"
+        title={task.isCompleted ? 'Desmarcar tarefa' : 'Marcar tarefa'}
+      >
+        {task.isCompleted ? (
           <Circle size={20} />
-        </button>
-      )}
+        ) : (
+          <CheckCircle size={20} weight="fill" />
+        )}
+      </button>
 
       <p className={styles.taskDescription}>{task.description}</p>
 
       <button
-        className={styles.taskTrashButton}
+        className={styles.trashButton}
         type="button"
         title="Deletar tarefa"
       >
-        <Trash size={16} weight="bold" color="var(--gray-300)" />
+        <Trash size={16} weight="bold" />
       </button>
     </div>
   );

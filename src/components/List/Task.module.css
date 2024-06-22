@@ -1,4 +1,4 @@
-.taskContainer {
+.container {
   display: flex;
   flex-direction: row;
   gap: 0.75rem;
@@ -8,7 +8,7 @@
   background-color: var(--gray-500);
 }
 
-.taskDescription {
+.description {
   flex: 1;
   font-size: 0.875rem;
   line-height: 140%;
