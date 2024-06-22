@@ -8,19 +8,19 @@
   margin-bottom: 1.5rem;
 }
 
-.container aside:first-of-type {
-  color: var(--blue);
-}
-
-.container aside:last-of-type {
-  color: var(--purple);
-}
-
-.container aside p {
+.container p {
   font-size: 0.875rem;
 }
 
-.container aside p span {
+.container p:first-of-type {
+  color: var(--blue);
+}
+
+.container p:last-of-type {
+  color: var(--purple);
+}
+
+.container p span {
   font-size: 0.75rem;
   color: var(--gray-200);
 
