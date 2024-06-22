@@ -8,8 +8,58 @@
   background-color: var(--gray-500);
 }
 
+.container button {
+  line-height: 0;
+}
+
+.checkbox {
+  height: 1.125rem;
+  width: 1.125rem;
+  margin: 0.17rem;
+  border-radius: 100%;
+}
+
+.checkboxUnchecked {
+  border: 2px solid var(--blue);
+  background-color: unset;
+}
+
+.checkboxUnchecked:hover {
+  border: 2px solid var(--blue-dark);
+  background-color: rgba(30, 111, 159, 0.2);
+}
+
+.checkboxChecked {
+  color: var(--gray-100);
+  border: none;
+  background-color: var(--purple-dark);
+}
+
+.checkboxChecked:hover {
+  background-color: var(--purple);
+}
+
 .description {
   flex: 1;
   font-size: 0.875rem;
   line-height: 140%;
+}
+
+.descriptionChecked {
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
+.trashButton {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: var(--gray-300);
+  border: none;
+  border-radius: 4px;
+  background-color: unset;
+}
+
+.trashButton:hover {
+  color: var(--danger);
+  background-color: var(--gray-400);
 }

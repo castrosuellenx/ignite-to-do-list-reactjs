@@ -1,4 +1,4 @@
-import {CheckCircle, Circle, Trash} from 'phosphor-react';
+import {Check, Trash} from 'phosphor-react';
 
 import styles from './Task.module.css';
 
@@ -13,25 +13,35 @@ type Props = {
 };
 
 export function Task({task}: Props) {
+  const checkboxClassName = `${styles.checkbox} ${
+    task.isCompleted ? styles.checkboxChecked : styles.checkboxUnchecked
+  }`;
+
+  const descriptionClassName = `${styles.description} ${
+    task.isCompleted ? styles.descriptionChecked : ''
+  }`;
+
   return (
-    <div className={styles.container}>
+    <li className={styles.container} role="listitem">
       <button
-        className={task.isCompleted ? styles.checkboxChecked : styles.checkbox}
+        className={checkboxClassName}
         type="button"
         title={task.isCompleted ? 'Uncheck task' : 'Check task'}
+        aria-label={task.isCompleted ? 'Uncheck task' : 'Check task'}
       >
-        {task.isCompleted ? (
-          <Circle size={20} />
-        ) : (
-          <CheckCircle size={20} weight="fill" />
-        )}
+        {task.isCompleted ? <Check size={12} weight="bold" /> : null}
       </button>
 
-      <p className={styles.taskDescription}>{task.description}</p>
+      <p className={descriptionClassName}>{task.description}</p>
 
-      <button className={styles.trashButton} type="button" title="Delete task">
+      <button
+        className={styles.trashButton}
+        type="button"
+        title="Delete task"
+        aria-label="Delete task"
+      >
         <Trash size={16} weight="bold" />
       </button>
-    </div>
+    </li>
   );
 }
