@@ -1,4 +1,5 @@
 import {Check, Trash} from 'phosphor-react';
+import {useTranslation} from 'react-i18next';
 
 import {TaskType} from '../../hooks/useTaskList';
 import styles from './Task.module.css';
@@ -10,6 +11,8 @@ type Props = {
 };
 
 export function Task({task, toggleCheckTask, deleteTask}: Props) {
+  const {t} = useTranslation();
+
   const checkboxClassName = `${styles.checkbox} ${
     task.isCompleted ? styles.checkboxChecked : styles.checkboxUnchecked
   }`;
@@ -31,8 +34,10 @@ export function Task({task, toggleCheckTask, deleteTask}: Props) {
       <button
         className={checkboxClassName}
         type="button"
-        title={task.isCompleted ? 'Uncheck task' : 'Check task'}
-        aria-label={task.isCompleted ? 'Uncheck task' : 'Check task'}
+        title={task.isCompleted ? t('task.uncheckTask') : t('task.checkTask')}
+        aria-label={
+          task.isCompleted ? t('task.uncheckTask') : t('task.checkTask')
+        }
         onClick={handleToggleCheckTask}
       >
         {task.isCompleted ? <Check size={12} weight="bold" /> : null}
@@ -43,8 +48,8 @@ export function Task({task, toggleCheckTask, deleteTask}: Props) {
       <button
         className={styles.trashButton}
         type="button"
-        title="Delete task"
-        aria-label="Delete task"
+        title={t('task.deleteTask')}
+        aria-label={t('task.deleteTask')}
         onClick={handleDeleteTask}
       >
         <Trash size={16} weight="bold" />

@@ -1,16 +1,17 @@
+import {useTranslation} from 'react-i18next';
 import {PlusCircle} from 'phosphor-react';
 
+import {useTaskList} from './hooks/useTaskList';
 import {Header} from './components/Header';
 import {Input} from './components/Input';
 import {ListHeader} from './components/List/ListHeader';
 import {EmptyList} from './components/List/EmptyList';
 import {Task} from './components/List/Task';
-import {useTaskList} from './hooks/useTaskList';
 import styles from './App.module.css';
 
-// TODO: i18n
-
 function App() {
+  const {t} = useTranslation();
+
   const {
     tasks,
     newTaskName,
@@ -31,8 +32,8 @@ function App() {
       <main className={styles.content}>
         <form className={styles.formWrapper} onSubmit={handleCreateNewTask}>
           <Input
-            placeholder="Add a new task"
-            aria-label="Task name"
+            placeholder={t('form.taskNameInput.placeholder')}
+            aria-label={t('form.taskNameInput.ariaLabel')}
             value={newTaskName}
             required
             onChange={handleChangeNewTaskName}
@@ -42,9 +43,10 @@ function App() {
           <button
             className={styles.createButton}
             type="submit"
-            aria-label="Create new task"
+            title={t('form.createButton.title')}
+            aria-label={t('form.createButton.ariaLabel')}
           >
-            Create <PlusCircle size={18} />
+            {t('form.createButton.text')} <PlusCircle size={18} />
           </button>
         </form>
 

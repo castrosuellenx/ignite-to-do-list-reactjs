@@ -1,3 +1,4 @@
+import {useTranslation} from 'react-i18next';
 import styles from './ListHeader.module.css';
 
 type Props = {
@@ -6,17 +7,19 @@ type Props = {
 };
 
 export function ListHeader({tasksLength, tasksCompleted}: Props) {
+  const {t} = useTranslation();
+
   return (
     <section className={styles.container} aria-live="polite">
       <p>
-        Created tasks <span>{tasksLength}</span>
+        {t('listHeader.createdTasks')} <span>{tasksLength}</span>
       </p>
 
       <p>
-        Done{' '}
+        {t('listHeader.done')}{' '}
         <span>
           {tasksCompleted > 0
-            ? `${tasksCompleted} of ${tasksLength}`
+            ? `${tasksCompleted} ${t('listHeader.of')} ${tasksLength}`
             : tasksCompleted}
         </span>
       </p>
