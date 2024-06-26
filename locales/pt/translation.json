@@ -1,0 +1,43 @@
+{
+  "header": {
+    "ariaLabel": "Cabeçalho da lista de tarefas",
+    "title": {
+      "part1": "to",
+      "part2": "do"
+    }
+  },
+  "languageSwitch": {
+    "titleEn": "Mudar idioma para Inglês",
+    "ariaLabelEn": "Mudar idioma para Inglês",
+    "altEn": "Bandeira dos EUA",
+    "titlePt": "Mudar idioma para Português Brasileiro",
+    "ariaLabelPt": "Mudar idioma para Português Brasileiro",
+    "altPt": "Bandeira do Brasil"
+  },
+  "form": {
+    "taskNameInput": {
+      "placeholder": "Adicione uma nova tarefa",
+      "ariaLabel": "Nome da tarefa"
+    },
+    "createButton": {
+      "text": "Criar",
+      "ariaLabel": "Criar nova tarefa",
+      "title": "Criar nova tarefa"
+    }
+  },
+  "listHeader": {
+    "createdTasks": "Tarefas criadas",
+    "done": "Concluídas",
+    "of": "de"
+  },
+  "emptyList": {
+    "clipboardAlt": "Ícone de uma prancheta ilustrando lista de tarefas vazia",
+    "title": "Você ainda não tem tarefas cadastradas",
+    "description": "Crie tarefas e organize seus itens a fazer"
+  },
+  "task": {
+    "checkTask": "Marcar tarefa",
+    "uncheckTask": "Desmarcar tarefa",
+    "deleteTask": "Deletar tarefa"
+  }
+}

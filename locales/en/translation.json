@@ -1,0 +1,43 @@
+{
+  "header": {
+    "ariaLabel": "To Do List Header",
+    "title": {
+      "part1": "to",
+      "part2": "do"
+    }
+  },
+  "languageSwitch": {
+    "titleEn": "Change language to English",
+    "ariaLabelEn": "Change language to English",
+    "altEn": "USA Flag",
+    "titlePt": "Change language to Brazilian Portuguese",
+    "ariaLabelPt": "Change language to Brazilian Portuguese",
+    "altPt": "Brazil Flag"
+  },
+  "form": {
+    "taskNameInput": {
+      "placeholder": "Add a new task",
+      "ariaLabel": "Task name"
+    },
+    "createButton": {
+      "text": "Create",
+      "ariaLabel": "Create new task",
+      "title": "Create new task"
+    }
+  },
+  "listHeader": {
+    "createdTasks": "Created tasks",
+    "done": "Done",
+    "of": "of"
+  },
+  "emptyList": {
+    "clipboardAlt": "Clipboard icon illustrating empty task list",
+    "title": "You don't have any tasks registered",
+    "description": "Create tasks and organize your to-do items"
+  },
+  "task": {
+    "checkTask": "Check task",
+    "uncheckTask": "Uncheck task",
+    "deleteTask": "Delete task"
+  }
+}
