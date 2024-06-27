@@ -171,8 +171,8 @@ ignite-to-do-list-reactjs/
 
 **_Requirements_** Ensure you have the following dependencies installed on your system:
 
-- **Node.js**: `version x.y.z`
-- **npm**: `version x.y.z`
+- **Node.js**: `version >=14.0.0`
+- **npm**: `version >=6.0.0`
 
 ### ⚙️ Install
 
