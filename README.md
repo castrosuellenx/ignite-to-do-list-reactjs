@@ -20,10 +20,8 @@
 	<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=flat-square&logo=JavaScript&logoColor=black" alt="JavaScript">
 	<img src="https://img.shields.io/badge/React-61DAFB.svg?style=flat-square&logo=React&logoColor=black" alt="React">
 	<img src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=flat-square&logo=TypeScript&logoColor=white" alt="TypeScript">
-	<img src="https://img.shields.io/badge/Vite-646CFF.svg?style=flat-square&logo=Vite&logoColor=white" alt="Vite">
 	<img src="https://img.shields.io/badge/Chakra--UI-319795.svg?style=flat-square&logo=Chakra-UI&logoColor=white" alt="Chakra UI">
 	<img src="https://img.shields.io/badge/i18next-26A69A.svg?style=flat-square&logo=i18next&logoColor=white" alt="i18next">
-	<img src="https://img.shields.io/badge/uuid-5B9BD5.svg?style=flat-square&logo=uuid&logoColor=white" alt="uuid">
 </p>
 
 <!-- TABLE OF CONTENTS -->
